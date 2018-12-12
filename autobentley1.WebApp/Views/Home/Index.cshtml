@@ -1,0 +1,250 @@
+﻿@using autobentley1.Entities
+@model List<Admin>
+@{
+    ViewBag.Title = "Anasayfa";
+}
+
+<div class="row">
+
+    <div class="col-md-2 d-none d-lg-block">
+        <img src="~/images/logo2.png" alt="Oto Servis 1" />
+        <img src="~/images/fordlogo-min.png" alt="Oto Servis 2" width="200" />
+        <img src="~/images/hyundailogo-min.png" alt="Oto Servis 3" width="200" />
+        <img src="~/images/audilogo-min.png" alt="Oto Servis 4" width="200" />
+        <img src="~/images/mercedeslogo-min.png" alt="Oto Servis 5" width="200" />
+    </div>
+
+    <div class="col-md-8">
+        <div class="slide-one-item home-slider owl-carousel">
+            <div class="site-blocks-cover overlay" style="background-image: url(/images/banner2.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
+                <div class="container">
+                    <div class="row align-items-center justify-content-center text-center">
+                        <div class="col-md-10">
+                            @*<h1 class="mb-5">Tamir EDİLEMEYECEK araç <strong>Yoktur</strong></h1>*@
+                            <h1 class="mb-5">Tüm Modellere <strong>Ustaca Çözümler</strong></h1>
+                            <p>
+                                <a href="@Url.Action("Iletisim","Home")" class="btn btn-primary py-3 px-5 rounded-0">İletişim</a>
+                                <a href="@Url.Action("Iletisim","Home")" class="btn btn-white btn-outline-white py-3 px-5 rounded-0">Hemen Arayın</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="site-blocks-cover overlay" style="background-image: url(/images/banner4-min.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
+                <div class="container">
+                    <div class="row align-items-center justify-content-center text-center">
+                        <div class="col-md-10">
+                            <h1 class="mb-5"><strong>EDC</strong> ŞANZIMAN SORUNLARI  <strong>ÇÖZÜME ULAŞTIRILIR</strong></h1>
+                            <p>
+                                <a href="@Url.Action("Iletisim","Home")" class="btn btn-primary py-3 px-5 rounded-0">İLETİŞİM</a>
+                                @*<a href="#" class="btn btn-white btn-outline-white py-3 px-5 rounded-0">Get In Touch</a>*@
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="site-blocks-cover overlay" style="background-image: url(/images/banner5.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
+                <div class="container">
+                    <div class="row align-items-center justify-content-center text-center">
+                        <div class="col-md-10">
+                            <h1 class="mb-5"><strong>PERİYODİK BAKIM </strong> </h1>
+                            <h1 class="mb-5">KIŞ BAKIMI  </h1>
+                            <h1 class="mb-5">YAĞ VE FİLTRE BAKIMI  </h1>
+                            <p>
+                                <a href="@Url.Action("Iletisim","Home")" class="btn btn-primary py-3 px-5 rounded-0">İLETİŞİM</a>
+                                @*<a href="#" class="btn btn-white btn-outline-white py-3 px-5 rounded-0">Get In Touch</a>*@
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="site-blocks-cover overlay" style="background-image: url(/images/banner1.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
+                <div class="container">
+                    <div class="row align-items-center justify-content-center text-center">
+                        <div class="col-md-10">
+                            <h1 class="mb-5">Tamir EDİLEMEYECEK araç <strong>Yoktur</strong></h1>
+                            <p>
+                                <a href="@Url.Action("Iletisim","Home")" class="btn btn-primary py-3 px-5 rounded-0">İLETİŞİM</a>
+                                @*<a href="#" class="btn btn-white btn-outline-white py-3 px-5 rounded-0">Get In Touch</a>*@
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="site-blocks-cover overlay" style="background-image: url(/images/banner3.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
+                <div class="container">
+                    <div class="row align-items-center justify-content-center text-center">
+                        <div class="col-md-10">
+                            <h1 class="mb-5">GÜVENİLİR HİZMET VE EN UYGUN FİYAT<strong>GARANTİSİ</strong></h1>
+                            <p>
+                                <a href="@Url.Action("Iletisim","Home")" class="btn btn-primary py-3 px-5 rounded-0">İLETİŞİM</a>
+                                @*<a href="#" class="btn btn-white btn-outline-white py-3 px-5 rounded-0">Get In Touch</a>*@
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="col-md-2 d-none d-lg-block">
+        @*<img src="~/images/bmwlogo.png" alt="Alternate Text" height="160" />*@
+        <img src="~/images/vwlogo-min.png" alt="Volkswagen" width="200" />
+        <img src="~/images/citroenlogo-min.png" alt="Citroen" width="200" />
+        <img src="~/images/renaultlogo-min.png" alt="Renault" height="200" />
+        <img src="~/images/bmwlogo-min.png" alt="BMW" height="170" />
+    </div>
+    <div class="col-md-2 d-sm-none">
+        <img src="~/images/logo2.png" alt="Oto Servis" width="80" />
+        <img src="~/images/fordlogo-min.png" alt="Ford" width="80" />
+        <img src="~/images/hyundailogo-min.png" alt="Hyundai" width="80" />
+        <img src="~/images/audilogo-min.png" alt="Audi" width="80" />
+        <img src="~/images/mercedeslogo-min.png" alt="Mercedes" width="80" />
+        <img src="~/images/vwlogo-min.png" alt="Volkswagen" width="80" />
+        <img src="~/images/citroenlogo-min.png" alt="Citroen" width="80" />
+        <img src="~/images/renaultlogo-min.png" alt="Renault" height="80" />
+    </div>
+</div>
+<div class="site-section border-bottom bg-light py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center mb-5"><h2 class="text-black h6 font-weight-bold text-uppercase" data-aos="fade">ARAÇLARINIZ İÇİN KALİTELİ ÇÖZÜMLER SUNUYORUZ</h2></div>
+            <div class="col-md-6 col-lg-4 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="0">
+                <div class="d-flex align-items-center">
+                    <div class="mr-3"><span class="icon-wrench display-3 text-primary"></span></div>
+                    <div class="">
+                        <h2 class="text-black">EDC Şanzıman</h2> <strong class="text-black">EDC şamzıman ile ilgili her türlü sorunu çözüyoruz.</strong> 
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="200">
+                <div class="d-flex align-items-center">
+                    <div class="mr-3"><span class="icon-car display-3 text-primary"></span></div>
+                    <div class="">
+                        <h2 class="text-black">Bakım</h2> <strong class="text-black">Periyodik bakım,kış bakımı,yağ ve filtre bakımı yapıyoruz.</strong>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 mb-0 mb-lg-0" data-aos="fade" data-aos-delay="300">
+                <div class="d-flex align-items-center">
+                    <div class="mr-3"><span class="icon-check display-3 text-primary"></span></div>
+                    <div class="">
+                        <h2 class="text-black">Güvenilirlik</h2> <strong class="text-black">En uygun fiyat ve üstün hizmet garantisi veriyoruz.</strong> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="site-section">
+
+    <div class="container">
+        <div class="row mb-5 justify-content-center">
+            <div class="col-12 text-center">
+                <h2 class="font-weight-light text-black display-4">İlkelerimiz</h2>
+            </div>
+            <div class="col-md-7 text-center">
+                <p>Yılların getirdiği deneyim ile birlikte müşteri memnuniyetini ve güvenilirliği her şeyden önde tutuyoruz.</p>
+            </div>
+        </div>
+        <div class="row no-gutters align-items-stretch h-100">
+            <div class="col-lg-6">
+                <div class="row no-gutters align-items-stretch h-100 half-sm">
+                    <div class="col-md-6 bg-image bg-sm-height" style="background-image: url('/images/img_4_colored.jpg');" data-aos="fade" data-aos-delay="0"></div>
+                    <div class="col-md-6 bg-light text">
+                        <div class="p-4">
+                            <h2 class="h5 mb-3 text-black line-height-sm">Müşteri Memnuniyeti</h2>
+                            <p>Siz müşterilerimiz ile daima fikir alışverişinde bulunarak aracınızla ilgili şikayetinizi dinliyor ve çözüm üretiyoruz. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="row no-gutters align-items-stretch h-100 half-sm">
+                    <div class="col-md-6 bg-image order-md-2 order-lg-1 bg-sm-height" style="background-image: url('/images/indexfoto2-min.jpg');" data-aos="fade" data-aos-delay="200"></div>
+                    <div class="col-md-6 bg-light text order-md-1 order-lg-2">
+                        <div class="p-4">
+                            <h2 class="h5 mb-3 text-black line-height-sm">%100 Güvenilirlik Anlayışı</h2>
+                            <p>Her bir müşterimiz bizim için çok değerlidir.Bu ilkeye bağlı kalarak tamirin her safhasında size karşı açık ve dürüst olmaya özen gösteriyoruz.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="row no-gutters align-items-stretch h-100 half-sm">
+                    <div class="col-md-6 bg-image order-md-1 order-lg-2 bg-sm-height" style="background-image: url('/images/indexfoto3-min.jpg');" data-aos="fade" data-aos-delay="300"></div>
+                    <div class="col-md-6 bg-light text order-md-2 order-lg-1">
+                        <div class="p-4">
+                            <h2 class="h5 mb-3 text-black line-height-sm">En Uygun Fiyat Garantisi</h2>
+                            <p>Son teknoloji malzeme ve ekipmanlar kullanılarak yapılan işlemlerimizin yanı sıra uygun fiyat ilkemiz ile piyasada ayrı bir noktadayız.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="row no-gutters align-items-stretch h-100 half-sm">
+                    <div class="col-md-6 bg-image order-md-2 bg-sm-height" style="background-image: url('/images/indexfoto4-min.jpg');" data-aos="fade" data-aos-delay="400"></div>
+                    <div class="col-md-6 bg-light text order-md-1">
+                        <div class="p-4">
+                            <h2 class="h5 mb-3 text-black line-height-sm">İmkansız Yoktur</h2>
+                            <p><b>Bahçelievler Bentley Oto Servis</b> olarak aracınızın sıkıntısı ne olursa olsun deneyim ve becerimizle çözüme ulaşıyoruz.Tam memnuniyet garantisi veriyoruz.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <div class="site-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 bg-image bg-sm-height mb-5 mb-md-0 order-md-2" style="background-image: url('/images/indexfoto1.jpg');" data-aos="fade-up"></div>
+                    <div class="col-md-6 pr-md-5 order-md-1">
+                        <h2 class="display-3 line-height-xs text-black mb-4">Neden bizi <strong>seçmelisiniz? </strong></h2>
+                        <p class="mb-4"><b>Bahçelievler Bentley Oto Servis</b> olarak yılların deneyimi ile bütün markalarda ve modellerde <b>BAŞARI GARANTİSİ</b> veriyoruz.</p>
+                        @*<p class="mb-4">A PLUS tüm marka ve modeller için profesyonel oto servis yaklaşımı ve ekonomik fiyat avantajını sunuyor.</p>*@
+                        <ul class="site-block-check">
+                            <li>Mekanik sorunlar </li>
+                            <li>Taşıtların İç ve dış aksamlarındaki sorunlar</li>
+                            <li>Taşıtta bulunan hasarlar</li>
+                            <li>Her türlü arızalanmalar</li>
+                        </ul>
+                        <p><b>Bahçelievler Bentley Oto Servis</b> ile artık başınızı ağrıtmasın.</p>
+                        <p><a href="@Url.Action("Iletisim","Home")" class="btn btn-outline-primary btn-sm rounded-0 p-2 px-4">Hemen Arayın !</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-2"></div>   
+</div>
+<div class="row">
+    <div class="col-12 text-center">
+        <h2 class="font-weight-light text-black display-4"><span  class="icon-flag"></span>Konumumuz</h2>
+    </div>
+    @*---------PC VIEW--------------------*@
+    <div class="row  d-none d-lg-block" align="center">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d760.0673474552528!2d28.84254379011098!3d41.00028416248321!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caa4a46d70cd3d%3A0x20bab88ab3bf7866!2s%C5%9Eirinevler+Mahallesi%2C+Mahmutbey+13.+Sk.+No%3A6%2C+34188+Bah%C3%A7elievler%2F%C4%B0stanbul!5e0!3m2!1str!2str!4v1543230067848" width="1100" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+    @*---------MOBILE VIEW--------------------*@
+    <div class="row  d-lg-none" align="center">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d760.0673474552528!2d28.84254379011098!3d41.00028416248321!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caa4a46d70cd3d%3A0x20bab88ab3bf7866!2s%C5%9Eirinevler+Mahallesi%2C+Mahmutbey+13.+Sk.+No%3A6%2C+34188+Bah%C3%A7elievler%2F%C4%B0stanbul!5e0!3m2!1str!2str!4v1543230067848" width="390" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+    </div>
+
+
+    
+</div>
+

@@ -1,0 +1,62 @@
+﻿@using autobentley1.Entities
+@model Admin
+@{
+    ViewBag.Title = "AdminPanel";
+
+    List<Form> formlar = TempData["Mails"] as List<Form>;
+
+
+}
+
+
+
+@if (Model != null)
+{
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <br /><br /><br />
+            <div id="header1" align="center">
+                <h3>Hoşgeldiniz <b style="color:chocolate">@Model.Username</b></h3>
+                <hr />
+            </div>
+            <br />
+            <div align="center"><p style="font-size:larger">Lütfen yapmak istediğiniz işlemi seçin.</p></div><br /><br />
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"><a href="@Url.Action("SoruCevaplarAdmin","Admin")" style="color:chocolate;font-size:large"><b><span class="icon-arrow-right"></span>&nbsp;&nbsp; Soru-Cevapları Görüntüle</b></a></li>
+                <li class="list-group-item"><a href="@Url.Action("FotoDuzenleAdmin","Admin")" style="color:chocolate;font-size:large"><b><span class="icon-arrow-right"></span>&nbsp;&nbsp; Fotoğraf Ekle/Kaldır</b></a></li>
+                <li class="list-group-item"><a href="#" style="color:chocolate;font-size:large"><b><span class="icon-arrow-right"></span>&nbsp;&nbsp; Site Ayarları</b></a></li>
+                @*<li class="list-group-item"><a href="#" style="color:chocolate;font-size:large"><b><span class="glyphicon glyphicon-signal"></span>&nbsp;&nbsp; Ziyaretçi İstatistikleri(Google Analytics)</b></a></li>*@
+            </ul>
+            @*<ul>
+            <li><a href="#" style="font-size:large">İlan Ekle</a></li>
+        </ul>*@
+
+
+        </div>
+        <div class="col-md-6">
+            <br /><br /><br />
+                <div align="center"><p style="font-size:larger"><h3>Son 20 iletişim formu mesajı</h3></p></div>
+                <br /><br />
+                @foreach (Form form in formlar)
+                {
+                    <p style="font-size:large"> <span class="glyphicon glyphicon-user"></span><b> @form.Name</b>&nbsp;&nbsp;&nbsp; @form.CreatedOn.ToShortDateString() / @form.Email</p>
+                    <p style="color:cornflowerblue">@form.Content  </p>
+                    <p><i><b>Telefon:</b> @form.PhoneNumber</i>  </p>
+                    @:<hr />
+                }
+        </div>
+    </div>
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        
+
+
+    </div>
+    <div class="col-md-2"></div>
+</div>
+    
+
+}
+
+

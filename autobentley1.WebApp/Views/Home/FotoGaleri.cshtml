@@ -1,0 +1,61 @@
+﻿@using autobentley1.Entities
+@model List<SoruCevap>
+@{
+    ViewBag.Title = "Foto Galeri";
+}
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<br />
+<h2 class="w3-center"><strong>FOTO GALERİ</strong></h2>
+<br />
+
+<div class="w3-content w3-display-container">
+    @*<img class="mySlides" src="~/images/foto4.jpg" style="width:100%" alt="Oto Servis Bahçelievler">
+        <img class="mySlides" src="~/images/foto2.jpg" style="width:100%" alt="Oto Servis Bahçelievler">
+        <img class="mySlides" src="~/images/foto3.jpg" style="width:100%" alt="Oto Servis Bahçelievler">
+        <img class="mySlides" src="~/images/foto6.jpg" style="width:100%" alt="Oto Servis Bahçelievler">
+        <img class="mySlides" src="~/images/foto7.jpg" style="width:100%" alt="Oto Servis Bahçelievler">
+        <img class="mySlides" src="~/images/foto8.jpg" style="width:100%" alt="Oto Servis Bahçelievler">
+        <img class="mySlides" src="~/images/foto9.jpg" style="width:100%" alt="Oto Servis Bahçelievler">
+        <img class="mySlides" src="~/images/foto10.jpg" style="width:100%" alt="Oto Servis Bahçelievler">
+        <img class="mySlides" src="~/images/foto11.jpg" style="width:100%" alt="Oto Servis Bahçelievler">
+        <img class="mySlides" src="~/images/foto12.jpg" style="width:100%" alt="Oto Servis Bahçelievler">
+        <img class="mySlides" src="~/images/foto13.jpg" style="width:100%" alt="Oto Servis Bahçelievler">
+        <img class="mySlides" src="~/images/foto14.jpg" style="width:100%" alt="Oto Servis Bahçelievler">
+        <img class="mySlides" src="~/images/foto15.jpg" style="width:100%" alt="Oto Servis Bahçelievler">
+        <img class="mySlides" src="~/images/foto16.jpg" style="width:100%" alt="Oto Servis Bahçelievler">
+        <img class="mySlides" src="~/images/foto17.jpg" style="width:100%" alt="Oto Servis Bahçelievler">
+        <img class="mySlides" src="~/images/foto18.jpg" style="width:100%" alt="Oto Servis Bahçelievler">
+        <img class="mySlides" src="~/images/foto19.jpg" style="width:100%" alt="Oto Servis Bahçelievler">
+        <img class="mySlides" src="~/images/foto20.jpg" style="width:100%" alt="Oto Servis Bahçelievler">
+        <img class="mySlides" src="~/images/foto21.jpg" style="width:100%" alt="Oto Servis Bahçelievler">*@
+
+    @foreach (SoruCevap foto in Model)
+    {
+        <img class="mySlides" src="~/images/@foto.Message" style="width:100%" alt="Oto Servis Bahçelievler">
+    }
+
+
+    <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+    <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+</div>
+
+<script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+
+    function plusDivs(n) {
+        showDivs(slideIndex += n);
+    }
+
+    function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        if (n > x.length) { slideIndex = 1 }
+        if (n < 1) { slideIndex = x.length }
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        x[slideIndex - 1].style.display = "block";
+    }
+</script>

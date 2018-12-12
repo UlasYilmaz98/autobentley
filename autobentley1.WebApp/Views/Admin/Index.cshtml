@@ -1,0 +1,74 @@
+﻿@using autobentley1.Entities
+@model Admin
+
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <style>
+                .validation-summary-errors {
+                    border: thin;
+                    border-radius: 8px;
+                    background-color: #cc8282;
+                    text-decoration: solid;
+                }
+            </style>
+
+            <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+            <div id="login-overlay" class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="myModalLabel">AUTO BENTLEY ADMİN PANELİ</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="@*col-xs-6*@ col-md-6">
+                                <div class="well">
+                                        @if (TempData["message"] != null)
+                                        {
+                                            <p style="color:darkred"> @TempData["message"] </p>
+                                        }
+                                        <br />
+                                        <form id="loginForm" method="post" action="/Admin/Index" novalidate="novalidate">
+                                            <div class="form-group">
+                                                <label for="username" class="control-label">Kullanıcı Adı</label>
+                                                <input type="text" class="form-control" name="userName" id="userName" required />
+                                                <span class="help-block"></span>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="password" class="control-label">Şifre</label>
+                                                <input type="password" class="form-control" id="password" name="password"  required />
+                                                <span class="help-block"></span>
+                                            </div>                                            
+                                            <button type="submit" class="btn btn-success btn-block">Giriş</button>
+                                        </form>
+                                    
+
+                                </div>
+                            </div>
+                            <div class="@*col-xs-6*@ col-md-6">
+                                <img src="~/images/lock.png" alt="Alternate Text" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+
+
+</div>
+
+

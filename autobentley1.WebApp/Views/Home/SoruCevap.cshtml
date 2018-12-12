@@ -1,0 +1,95 @@
+﻿@using autobentley1.Entities
+@model List<SoruCevap>
+@{
+    ViewBag.Title = "SoruCevap";
+    List<SoruCevap> cevaplar = TempData["cevaplar"] as List<SoruCevap>;
+
+
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-6">           
+            <br /><br /><br />
+            @if( TempData["message"] != null )
+                {
+                    <div class="alert alert-success" role="alert">
+                        <b> @TempData["message"] </b>
+                       
+                    </div>
+                    <br />
+                }
+            <div><p style="font-size:larger;color:#1761a0"><h3 style="color:#1761a0"><span class="icon-calendar"></span> GÜNCEL MESAJLAR <span class="icon-calendar"></span></h3></p></div>
+                <br /><br />
+                @foreach (SoruCevap soru in Model)
+                {
+                      <p style="font-size:large"> <span class="icon-user"></span><b> @soru.Name</b>&nbsp; <span style="font-size:small"><i>tarafından eklendi</i></span></p>
+                    <p style="color:#1761a0">@soru.Message  </p>
+                    @:
+                      <div class="row">
+                          <div class="col-md-1"></div>
+                          <div class="col-md-8">
+                              @foreach( SoruCevap cevap in cevaplar )
+                              {
+                              if ( cevap.Baginti == soru.Id.ToString() )
+                              {
+                              <p style="font-size:large"> <span class="icon-arrow-circle-o-right"></span><b> Yöneticinin Cevabı</b></p>
+                              <p style="color:#1761a0">@cevap.Message  </p>
+                              }
+                              }
+                          </div>
+                      </div>
+                      <hr />
+                    
+                    
+                }
+                
+        
+        </div>
+        <div class="col-md-5 d-none d-lg-block">
+            <br /><br />
+            <img src="~/images/foto14.jpg" class="img img-thumbnail" alt="Oto servisimizdeki bir araç" /><br />
+            <img src="~/images/indexfoto2.jpg" class="img img-thumbnail" alt="Audi motor tamir" />
+            @if( Model.Count > 3 )
+            {
+                <img src="~/images/foto6.jpg" class="img img-thumbnail" alt="Motor tamir" />
+            }
+            @if ( Model.Count > 6 )
+            {
+                <img src="~/images/foto9.jpg" class="img img-thumbnail" alt="Opel motor tamir" />
+            }
+        </div>
+    </div>
+    <br /><br />
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <div class="card" style="border-color:#1761a0">               
+                <div class="card-body">
+                    <h3 style="color:#1761a0"> Soru veya yorum ekleyin </h3>
+                    <form action="/Home/SoruCevap" method="post">
+                        <div class="form-group">
+                            <label for="name"><b>İsim:</b></label>
+                            <input type="text" class="form-control" id="name" name="name" placeholder="İsminiz" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email"><b>Eposta Adresi:( Form sayfasında görünmez. )</b></label>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="E-posta adresiniz">
+                        </div>
+                        <div class="form-group">
+                            <label for="message"><b>Mesajınız:</b></label>
+                            <textarea class="form-control" id="message" name="message" rows="3"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-outline-danger btn-group"> GÖNDER </button>
+                    </form>
+                </div>
+            </div>
+            
+            <br />
+            
+        </div>
+        
+    </div>
+</div>
+

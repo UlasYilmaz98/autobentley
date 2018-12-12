@@ -1,0 +1,53 @@
+﻿@using autobentley1.Entities
+@model List<SoruCevap>
+@{
+    ViewBag.Title = "SoruCevap";
+    List<SoruCevap> cevaplar = TempData["cevaplar"] as List<SoruCevap>;
+
+
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+            <br /><br /><br />
+            <div><p style="font-size:larger;color:#1761a0"><h3 style="color:#1761a0"><span class="icon-calendar"></span> GÜNCEL MESAJLAR <span class="icon-calendar"></span></h3></p></div>
+            <br /><br />
+            @foreach (SoruCevap soru in Model)
+            {
+                <p style="font-size:large"> <span class="icon-user"></span><b> @soru.Name</b>&nbsp;&nbsp;&nbsp; @soru.CreatedOn.ToShortDateString() </p>
+                <p style="color:#1761a0">@soru.Message  </p>
+                @:
+                <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-8">
+                        @foreach (SoruCevap cevap in cevaplar)
+                        {
+                            if (cevap.Baginti == soru.Id.ToString())
+                            {
+                                <p style="font-size:large"> <span class="icon-arrow-circle-o-right"></span><b> Yöneticinin Cevabı</b></p>
+                                <p style="color:#1761a0">@cevap.Message  </p>
+                            }
+                        }
+                    </div>
+                </div>
+                <br />
+                <form action="/Admin/SoruCevaplarAdmin" method="post">
+                            <label for="message"><b>Cevap Yazın:</b></label>
+                            <textarea class="form-control" id="message" name="message" rows="3"></textarea>
+                            <input type="text" name="baginti" value="@soru.Id" readonly="readonly"/>
+                            <button type="submit" class="btn btn-success btn-group" >GÖNDER</button>  <a href="@Url.Action("MesajSil","Admin",new { mesajId = soru.Id})" class="btn btn-danger btn-group" onclick="return confirm('Bu mesajı silmek istediğinizden emin misiniz?');"><b>BU MESAJI SİL</b></a>
+                </form>
+                <hr />
+
+
+            }
+
+
+        </div>
+    </div>
+    <br /><br />
+    
+</div>
+

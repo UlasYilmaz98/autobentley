@@ -1,0 +1,66 @@
+﻿@using autobentley1.Entities
+@model List<SoruCevap>
+@{
+    ViewBag.Title = "FotoDuzenleAdmin";
+    int fotoSayisi = Model.Count;
+    int kalanFoto = 30 - fotoSayisi;
+}
+
+<div class="container">
+    <div class="col-md-12">
+        <div class="row">
+            <div class="col-md-12">
+                <br /><br />
+                <p style="font-size:larger;color:cornflowerblue"> <b>FOTOĞRAFLARI DÜZENLE</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="@Url.Action("AdminPanel","Admin")" style="font-size:smaller;color:darkred"><span class="icon icon-arrow-circle-left"></span>Admin Paneline dön</a> </p>
+                <hr />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                @if ( TempData["message"] != null )
+                {
+                    <div class="alert alert-success" role="alert">
+                      @TempData["message"]
+                    </div><br /><br />
+                }
+            </div>
+        </div>
+        <div class="row">
+            
+            @foreach( SoruCevap foto in Model )
+            {
+                <div class="col-md-3">
+                    <br />
+                    <a href="@Url.Action("FotoDuzenleSilPost","Admin",new { fotoId = foto.Id})" class="btn btn-danger"><span class="icon icon-remove"></span>FOTOĞRAFI SİL</a>
+                    <img src="~/images/@foto.Message" alt="Bahçelievler Oto Servis Fotoğraf" class="" width="225" height="169" />
+                    <hr />
+                </div>
+                
+            }
+                
+            @if ( kalanFoto > 0 )
+            {
+                
+                for ( int i =0; i<kalanFoto;i++ )
+                {
+                    
+                    <div class="col-md-3">
+                        <br />
+                        <img src="~/images/dsasdasdas.jpg" alt="Fotoğraf Yok" class="" width="225" height="169" />
+                        <form action="@Url.Action("FotoDuzenleEklePost","Admin",new { enctype="multipart/form-data" })" method="post" enctype="multipart/form-data">
+                            <input type="file" id="uploadFile" name="uploadFile" />
+                            @*<a href="@Url.Action("FotoDuzenleEklePost","Admin",new { ilanId = Model.Id,photoPathNumber = 5})" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span>FOTOĞRAFI EKLE</a>*@
+                            <br />
+                            <button type="submit" class="btn btn-primary"><span class="icon icon-add"></span>FOTOĞRAFI EKLE</button>
+                        </form>
+                        <br /><br />
+                    </div>
+                    
+                    
+                }
+            }
+
+        </div>
+    </div>
+</div>
+

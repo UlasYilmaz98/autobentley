@@ -1,0 +1,129 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="bahçelievler oto servis,bahçelievler,oto,servis,bayii,araç,bentley,auto,bakım,periyodik">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Ulaş Yılmaz">
+    <meta name="description" content="Bahçelievler Bentley Oto Servis her marka ve model aracınızın sorunlarını en güvenilir şekilde çözüme kavuşturun.Şirinevler merkeze 5 dakika uzaklıktayız.Aracınızı getirin,bakalım.Otomobil arızalanmalarına hızlı ve kesin tamir yöntemleri.">
+    <link rel="shortcut icon" href="~/images/bentleylogo.ico" />
+    <title>Bahçelievler Bentley Oto Servis - @ViewBag.Title</title>
+
+
+
+
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,700,900|Roboto+Mono:300,400,500">
+    <link href="~/fonts/icomoon/style.css" rel="stylesheet" />
+
+    <link href="~/fonts/flaticon/font/flaticon.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-grid.min.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-reboot.min.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-datepicker.css" rel="stylesheet" />
+    <link href="~/Content/owl.carousel.min.css" rel="stylesheet" />
+    <link href="~/Content/magnific-popup.css" rel="stylesheet" />
+    <link href="~/Content/owl.theme.default.min.css" rel="stylesheet" />
+    <link href="~/Content/style.css" rel="stylesheet" />
+
+
+</head>
+<body>
+    <div class="site-wrap">
+        <div class="site-mobile-menu">
+            <div class="site-mobile-menu-header">
+                <div class="site-mobile-menu-close mt-3">
+                    <span class="icon-close2 js-menu-toggle"></span>
+                </div>
+            </div>
+            <div class="site-mobile-menu-body"></div>
+        </div>
+        <div class="site-navbar-wrap bg-white">
+            <div class="site-navbar-top">
+                <div class="container py-2">
+                    <div class="row align-items-center">
+                        <div class="col-6">
+                            <div class="d-none d-lg-block"><b>Şirinevler Mh. Mahmutbey Caddesi 13.Sk. Altunbaş 6/A Bahçelievler/İSTANBUL</b></div>
+                            
+                        </div>
+                        <div class="col-6">
+                            <div class="d-flex ml-auto">
+                                <a href="#" class="d-flex align-items-center ml-auto mr-4">
+                                    <span class="icon-phone mr-2"></span>
+                                    <span class="@*d-none d-md-inline-block*@">05424209372</span>
+                                </a>
+                                <a href="#" class="d-flex align-items-center">
+                                    <span class="icon-envelope mr-2"></span>
+                                    <span class="d-none d-md-inline-block">autobentleybahcelievler@hotmail.com</span>
+                                    
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="site-navbar bg-light">
+                <div class="container py-1">
+                    <div class="row align-items-center">
+                        <div class="col-2">
+                            <h2 class="mb-0 site-logo"><a href="@Url.Action("Index","Home")"><b><span class="flaticon-gears"></span>Auto<span style="color:#1761a0">Bentley</span></b></a></h2>
+                        </div>
+                        <div class="col-10">
+                            <nav class="site-navigation text-right" role="navigation">
+                                <div class="container">
+                                    <div class="d-inline-block d-lg-none ml-md-0 mr-auto py-3"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+                                    <ul class="site-menu js-clone-nav d-none d-lg-block">
+                                        <li><a href="@Url.Action("Index","Home")">ANASAYFA</a></li>
+                                        @*<li class="has-children active">
+                                            <a href="index.html">Anasayfa</a>
+                                            <ul class="dropdown arrow-top">
+                                                <li><a href="#">Menu One</a></li>
+                                                <li><a href="#">Menu Two</a></li>
+                                                <li><a href="#">Menu Three</a></li>
+                                                <li class="has-children">
+                                                    <a href="#">Sub Menu</a>
+                                                    <ul class="dropdown">
+                                                        <li><a href="#">Menu One</a></li>
+                                                        <li><a href="#">Menu Two</a></li>
+                                                        <li><a href="#">Menu Three</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>*@
+                                        <li><a href="@Url.Action("FotoGaleri","Home")">FOTO GALERİ</a></li>
+                                        <li><a href="@Url.Action("Hizmetlerimiz","Home")">HİZMETLERİMİZ</a></li>
+                                        <li><a href="@Url.Action("Iletisim","Home")">İLETİŞİM</a></li>
+                                        <li><a href="@Url.Action("SoruCevap","Home")">SORU-CEVAP</a></li>
+                                    </ul>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="body-content">
+        @RenderBody()
+        <hr />
+        @*<footer>
+                <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            </footer>*@
+    </div>
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <script src="~/js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="~/Scripts/popper.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/js/owl.carousel.min.js"></script>
+    <script src="~/js/jquery.stellar.min.js"></script>
+    <script src="~/js/jquery.countdown.min.js"></script>
+    <script src="~/js/jquery.magnific-popup.min.js"></script>
+    <script src="~/js/bootstrap-datepicker.min.js"></script>
+    <script src="~/js/aos.js"></script>
+    <script src="~/js/main.js"></script>
+
+</body>
+</html>
